@@ -21,9 +21,10 @@ The data was extracted from CA driver's handbook and converted to txt file
 ### Step 2 : Clean and normalize the data
 Using Regex the data was cleaned and removed all the non alpha numeric charcters along with white spaces and empty lines
 ### Step 3 : Process the data
-Once the data is ready its saved as manual.txt on EC2 instance the referrence manual.txt is uploaded here
-then using the text splitter.py script the data is processed in chunks and the output is saved under training_txt folder
+Once the data is ready its saved as manual.txt on EC2 instance the referrence manual.txt is uploaded [here](https://github.com/hegdebhavya/Mobile_ChatGPT/blob/master/ChatGPT_CA_DMV_CustomizedModel/manual.txt)
+then using the text [splitter.py](https://github.com/hegdebhavya/Mobile_ChatGPT/blob/master/ChatGPT_CA_DMV_CustomizedModel/text_splitter.py) script the data is processed in chunks and the output is saved under [training_txt](https://github.com/hegdebhavya/Mobile_ChatGPT/tree/master/ChatGPT_CA_DMV_CustomizedModel/training_text) folder
 ###  Step 4: Backend API Implementation
+
 Django code sets up an API endpoint for a chatbot that is trained to respond to questions related to the California drivers manual. The model is trained using the langchain library, which utilizes OpenAI embeddings and a vector store. The training text documents are loaded from a specified directory and split into chunks for processing. The trained model, VectorDBQA, is created with the OpenAI language model and the vector store. When a POST request is made to the API endpoint with a question in the request body, the question is passed to the model, and the model generates a response. The response is returned as a JSON object from the API endpoint.<br>
 Spinned up a EC2 instance created a virtual environment  and installed all the required dependecies for the as listed in requirements.txt and created a django project
 Model is trained under the code in views.py and response is rendered using API endpoint `api/endpoint`. Replace the API Key with your own API key to make this project work.
@@ -34,12 +35,15 @@ Android chat application allows users to ask questions related to the California
 * Generate your openAI keys from https://platform.openai.com/account/api-keys
 * Clone the repo 
 * Clean , Extract, proocess and clean the data that you want to train using the steps given in Implementation 
-* Spin up a EC2 instance and move the Backend code to EC2 . create a Virtual environment install the required dependencies. Replace API keys with the key you have generated in step 1
+* Spin up a EC2 instance and move the [Backend code](https://github.com/hegdebhavya/Mobile_ChatGPT/tree/master/ChatGPT_CA_DMV_CustomizedModel) to EC2 . create a Virtual environment install the required dependencies. Replace API keys with the key you have generated.
 * Run the server and Test the reponse using API endpoint 
 * Now run the app code in android studio to get the response.
 
 
 ### Architecture Diagram :
+
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/85700971/236660110-05024515-fd18-4ad0-a262-92e7d8494bd9.png">
+
 
 ### API Response Screenshots:
 
