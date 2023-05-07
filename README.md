@@ -31,6 +31,13 @@ Model is trained under the code in views.py and response is rendered using API e
 Android chat application allows users to ask questions related to the California drivers manual. It sends the user's question to a backend API endpoint, which runs a model trained specifically to answer questions related to the manual. If the question is related to the manual, the chatbot will provide a response. However, if the question is unrelated or unknown, the chatbot will respond with "I don't know."
 
 ### Instructions to run the app: 
+* Generate your openAI keys from https://platform.openai.com/account/api-keys
+* Clone the repo 
+* Clean , Extract, proocess and clean the data that you want to train using the steps given in Implementation 
+* Spin up a EC2 instance and move the Backend code to EC2 . create a Virtual environment install the required dependencies. Replace API keys with the key you have generated in step 1
+* Run the server and Test the reponse using API endpoint 
+* Now run the app code in android studio to get the response.
+
 
 ### Architecture Diagram :
 
