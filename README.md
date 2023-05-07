@@ -13,6 +13,7 @@ It's a synonym in today's enterprise web technologies the use of ChatGPT with cu
 Frontend: Java based Android app<br/>
 Backend API : Python Django framework<br/>
 AWS component: EC2
+Other tools : Postman
 
 ## Implementation
 ### Step 1 : Extract the data 
@@ -28,6 +29,36 @@ Spinned up a EC2 instance created a virtual environment  and installed all the r
 Model is trained under the code in views.py and response is rendered using API endpoint `api/endpoint`. Replace the API Key with your own API key to make this project work.
 ### Step 5 : FrontEnd Implementation
 Android chat application allows users to ask questions related to the California drivers manual. It sends the user's question to a backend API endpoint, which runs a model trained specifically to answer questions related to the manual. If the question is related to the manual, the chatbot will provide a response. However, if the question is unrelated or unknown, the chatbot will respond with "I don't know."
+
+Architecture Diagram :
+
+API Response Screenshots:
+
+Question related to CA driver's Manual:
+
+![image](https://user-images.githubusercontent.com/85700971/236658300-324bd9ae-2220-4021-b73b-ff7dd0cc32f6.png)
+
+Question that is not related to CA driver's Manual:
+
+<img width="910" alt="image" src="https://user-images.githubusercontent.com/85700971/236658380-74741e4c-6b69-432f-a952-e250cb109e6b.png">
+
+
+App Screenshots:
+
+![image](https://user-images.githubusercontent.com/85700971/236658458-17ff3725-a766-4838-9534-df2eab398527.png)
+
+![image](https://user-images.githubusercontent.com/85700971/236658466-c02e9cc3-d6f4-43c7-afd4-5a359521501c.png)
+
+![image](https://user-images.githubusercontent.com/85700971/236658469-321082a6-4bd3-4592-9e4a-e8fff171c15b.png)
+
+![image](https://user-images.githubusercontent.com/85700971/236658473-159b69b1-4c49-463a-b9c4-f05efa15569e.png)
+
+
+
+
+
+
+
 
 
 
