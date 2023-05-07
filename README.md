@@ -30,9 +30,11 @@ Model is trained under the code in views.py and response is rendered using API e
 ### Step 5 : FrontEnd Implementation
 Android chat application allows users to ask questions related to the California drivers manual. It sends the user's question to a backend API endpoint, which runs a model trained specifically to answer questions related to the manual. If the question is related to the manual, the chatbot will provide a response. However, if the question is unrelated or unknown, the chatbot will respond with "I don't know."
 
-Architecture Diagram :
+### Instructions to run the app: 
 
-API Response Screenshots:
+### Architecture Diagram :
+
+### API Response Screenshots:
 
 Question related to CA driver's Manual:
 
@@ -43,7 +45,7 @@ Question that is not related to CA driver's Manual:
 <img width="910" alt="image" src="https://user-images.githubusercontent.com/85700971/236658380-74741e4c-6b69-432f-a952-e250cb109e6b.png">
 
 
-App Screenshots:
+### App Screenshots:
 
 ![image](https://user-images.githubusercontent.com/85700971/236658458-17ff3725-a766-4838-9534-df2eab398527.png)
 
