@@ -88,17 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model","text-davinci-003");
-            jsonBody.put("prompt",question);
-            jsonBody.put("max_tokens",4000);
-            jsonBody.put("temperature",0);
+            jsonBody.put("question",question);
         } catch (JSONException e) {
             e.printStackTrace();
         }
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
-                .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer API_KEY")
+                //Backend api for the model trained on california drivers manual
+                .url("http://54.219.191.152:80/api/endpoint")
                 .post(body)
                 .build();
 
@@ -114,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject  jsonObject = null;
                     try {
                         jsonObject = new JSONObject(response.body().string());
-                        JSONArray jsonArray = jsonObject.getJSONArray("choices");
-                        String result = jsonArray.getJSONObject(0).getString("text");
+                        System.out.println(jsonObject);
+                        String result = jsonObject.getString("response");
                         addResponse(result.trim());
                     } catch (JSONException e) {
                         e.printStackTrace();
