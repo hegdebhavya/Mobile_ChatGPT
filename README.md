@@ -23,7 +23,7 @@ Using Regex the data was cleaned and removed all the non alpha numeric charcters
 Once the data is ready its saved as manual.txt on EC2 instance the referrence manual.txt is uploaded here
 then using the text splitter.py script the data is processed in chunks and the output is saved under training_txt folder
 ###  Step 4: Backend API Implementation
-This project is a Django-based API endpoint for question-answering using language embeddings and vector stores.This API endpoint allows users to send a question as a POST request and receive a JSON response with the answer. The question is processed using language embeddings and a vector store, which enables accurate question-answering.
+Django code sets up an API endpoint for a chatbot that is trained to respond to questions related to the California drivers manual. The model is trained using the langchain library, which utilizes OpenAI embeddings and a vector store. The training text documents are loaded from a specified directory and split into chunks for processing. The trained model, VectorDBQA, is created with the OpenAI language model and the vector store. When a POST request is made to the API endpoint with a question in the request body, the question is passed to the model, and the model generates a response. The response is returned as a JSON object from the API endpoint.<br>
 Spinned up a EC2 instance created a virtual environment  and installed all the required dependecies for the as listed in requirements.txt and created a django project
 Model is trained under the code in views.py and response is rendered using API endpoint `api/endpoint`. Replace the API Key with your own API key to make this project work.
 ### Step 5 : FrontEnd Implementation
